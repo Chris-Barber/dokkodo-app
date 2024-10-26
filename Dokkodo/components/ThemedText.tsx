@@ -1,6 +1,7 @@
 import { Text, type TextProps, StyleSheet } from 'react-native';
 
 import { useThemeColor } from '@/hooks/useThemeColor';
+import GlobalStyles from '@/constants/GlobalStyles';
 
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
@@ -35,8 +36,11 @@ export function ThemedText({
 
 const styles = StyleSheet.create({
   default: {
-    fontSize: 16,
-    lineHeight: 24,
+    fontSize: GlobalStyles.bodyText.fontSize,
+    fontWeight: GlobalStyles.bodyText.fontWeight, // Light for body text to add to a contemplative tone
+    fontFamily: GlobalStyles.bodyText.fontFamily,
+    lineHeight: GlobalStyles.bodyText.lineHeight,
+    marginBottom: 8,
   },
   defaultSemiBold: {
     fontSize: 16,
@@ -44,9 +48,12 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   title: {
-    fontSize: 32,
-    fontWeight: 'bold',
     lineHeight: 32,
+    fontSize: GlobalStyles.titleText.fontSize,
+    fontWeight: GlobalStyles.titleText.fontWeight, // Bold for titles
+    fontFamily: GlobalStyles.titleText.fontFamily,
+    textAlign: GlobalStyles.titleText.textAlign, // Center-aligned for title
+    marginVertical: GlobalStyles.titleText.marginVertical,
   },
   subtitle: {
     fontSize: 20,

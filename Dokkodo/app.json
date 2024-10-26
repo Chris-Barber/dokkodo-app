@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Dokkodo",
-    "slug": "Dokkodo",
+    "name": "Dokkōdō",
+    "slug": "dokkodo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -31,6 +31,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e13a8eb1-ca22-4cbf-9c39-6853bea4143d"
+      }
+    },
+    "owner": "littlechris"
   }
 }
